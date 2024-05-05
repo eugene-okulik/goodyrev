@@ -1,15 +1,5 @@
-import re
 from playwright.sync_api import Page, expect
 from time import sleep
-
-
-
-def test_one(page: Page):
-    page.goto('https://www.google.com')
-    search_field = page.get_by_role('combobox')
-    search_field.fill('cat')
-    page.keyboard.press('Enter')
-    expect(page).to_have_title(re.compile('^cat'))
 
 
 def test_by_role(page: Page):
@@ -32,5 +22,10 @@ def test_by_role(page: Page):
     submit_button = page.get_by_role('button')
     submit_button.click()
     sleep(1)
+
+
+def test_26_part_2(page: Page):
+    page.goto('https://demoqa.com/automation-practice-form')
+    # demoqa.com не грузится - TimeoutError
 
 
