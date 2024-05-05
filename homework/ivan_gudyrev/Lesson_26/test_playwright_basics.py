@@ -27,5 +27,3 @@ def test_by_role(page: Page):
 def test_26_part_2(page: Page):
     page.goto('https://demoqa.com/automation-practice-form')
     # demoqa.com не грузится - TimeoutError
-
-
