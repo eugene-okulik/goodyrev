@@ -7,3 +7,7 @@ __pycache__
 credentials.py
 .env
 env
+.github
+.vscode
+.gitignore
+pytest.ini
