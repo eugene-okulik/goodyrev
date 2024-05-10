@@ -9,4 +9,3 @@ credentials.py
 env
 .vscode
 .gitignore
-pytest.ini
