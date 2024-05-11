@@ -4,6 +4,13 @@ import re
 import json
 
 
+def test_28(page: Page):
+    page.goto("https://www.apple.com/shop/buy-iphone")
+    page.get_by_role("link", name="iPhone 15 Pro & iPhone 15 Pro").click()
+    page.get_by_text('USB-C connector with USB 3 for up to 20x faster transfer speeds footnote ² and new pro workflows')
+
+
+
 def test_listen(page: Page):
 
     def print_request(request: Request):
