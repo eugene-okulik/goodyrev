@@ -27,4 +27,3 @@ def test_28(page: Page):
 
     product_name = page.locator('#rf-digitalmat-overlay-label-0').nth(0)
     expect(product_name).to_have_text(new_name)
-    
