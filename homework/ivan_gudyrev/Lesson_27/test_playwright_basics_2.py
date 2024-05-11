@@ -50,8 +50,3 @@ def test_27_part3_waits(page: Page):
     # (HEX #dc3545 == rgb(220,53,69))
     expect(changing_button).to_have_css('color', 'rgb(220, 53, 69)', timeout=20000)
     changing_button.click()
-
-
-
-
-
