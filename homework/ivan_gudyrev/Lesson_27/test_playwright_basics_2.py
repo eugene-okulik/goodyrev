@@ -6,7 +6,7 @@ def test_27_part1_alert(page: Page):
     page.on('dialog', lambda alert: alert.accept())
 
     page.goto('https://www.qa-practice.com/elements/alert/confirm', wait_until='domcontentloaded')
-    
+
     click = page.get_by_role('link', name='Click')
     click.click()
 
@@ -17,7 +17,7 @@ def test_27_part1_alert(page: Page):
 def test_27_part2_tabs(page: Page, context: BrowserContext):
     page.set_viewport_size({'width': 1920, 'height': 1080})
     page.goto('https://www.qa-practice.com/elements/new_tab/button', wait_until='domcontentloaded')
-    
+
     link = page.locator('#new-page-button')
     with context.expect_page() as new_page_event:
         link.click()
