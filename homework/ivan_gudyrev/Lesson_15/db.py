@@ -89,13 +89,14 @@ print(cursor.fetchall())
 
 
 query_all = '''
-SELECT s.name, s.second_name, g.title as 'group', b.title as 'books', s2.title as 'subjects', l.title as 'lessons', m.value as 'values'
-FROM students s 
-JOIN `groups` g ON s.group_id = g.id 
+SELECT s.name, s.second_name, g.title as 'group', b.title as 'books', s2.title as 'subjects',
+l.title as 'lessons', m.value as 'values'
+FROM students s
+JOIN `groups` g ON s.group_id = g.id
 JOIN books b ON b.taken_by_student_id = s.id
 JOIN marks m  ON m.student_id = s.id
-JOIN lessons l ON l.id = m.lesson_id 
-JOIN subjets s2 ON s2.id = l.subject_id 
+JOIN lessons l ON l.id = m.lesson_id
+JOIN subjets s2 ON s2.id = l.subject_id
 WHERE s.id = %s
 '''
 cursor.execute(query_all, (student_id,))
