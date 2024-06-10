@@ -30,7 +30,7 @@ AND l.title = %s AND  m.value = %s
 
 absent = []
 
-with open("homework\eugene_okulik\Lesson_16\hw_data\data.csv", encoding="utf-8") as csv_file:
+with open(r"homework\eugene_okulik\Lesson_16\hw_data\data.csv", encoding="utf-8") as csv_file:
     file_data = csv.DictReader(csv_file, delimiter=",")
     for row in file_data:
         data = [v for v in row.values()]
